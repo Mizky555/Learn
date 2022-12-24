@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsirirak <mavin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/24 20:13:04 by tsirirak          #+#    #+#             */
-/*   Updated: 2022/12/24 20:35:26 by tsirirak         ###   ########.fr       */
+/*   Created: 2022/12/24 20:41:58 by tsirirak          #+#    #+#             */
+/*   Updated: 2022/12/24 23:24:22 by tsirirak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
 
-int	main(int argc, char **argv)
+# include <unistd.h>
+# include <stdlib.h>
+# include <stdio.h>
+# include "./libft/libft.h"
+
+typedef struct s_ps
 {
-	int i = 0;
-	while (argv[i])
-	{
-		printf("-%s\n",argv[i++]);
-	}
-	
-}
+	int	*num;
+} t_ps;
+
+int	check_type(t_ps *s,char **gv);
+
+#endif
